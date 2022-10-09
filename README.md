@@ -10,6 +10,7 @@ You can view detailed codes of
 1. the graph visualization engine and data capture & processing in `/src/lib/knn3/graph.js`
 2. the index based on PageRank algorithm in `/src/algorithm/pagerank.py`
 3. the intergration of the Follow feature in `/src/contract/useLenshubContract.js`
+
 and use the social discovery search engine in https://social.mashmesh.knn3.xyz/
 
 
@@ -22,6 +23,9 @@ Lens on MashMesh - Presentation slides (Google version)
 
 https://docs.google.com/presentation/d/1eu_Ge8gx7RUiBMih-Rcnhx8vjBVVye2d2aoVSfdLLf0/edit?usp=sharing
 
+Lens on MashMesh Demo
+
+https://drive.google.com/file/d/1ZgmWqtbqwxLb61ja_1uHhtY24HrTdjBV/view?usp=sharing
 
 ## How to handle new data type (DCP, data collaborate mechanism backed by KNN3 Network)
 
