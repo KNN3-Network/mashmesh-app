@@ -131,6 +131,7 @@ const getTargetScript = (val, pagi) => {
     case "lensInclude":
       return `
       lensInclude(options:${pagi}){
+        to,
         handle,
         profileId,
       }
@@ -138,6 +139,7 @@ const getTargetScript = (val, pagi) => {
     case "followLens":
       return `
       followLens(options:${pagi}){
+        to,
         handle,
         profileId,
       }
