@@ -23,6 +23,25 @@ Lens on MashMesh - Presentation slides (Google version)
 https://docs.google.com/presentation/d/1eu_Ge8gx7RUiBMih-Rcnhx8vjBVVye2d2aoVSfdLLf0/edit?usp=sharing
 
 
+## How to handle new data type (DCP, data collaborate mechanism backed by KNN3 Network)
+
+As MashMesh is a open search protocol built on top of KNN3 Network - GraphX, instead of requiring every application to handle data fetching - indexing - Graph serving and other tedieous data process work, dapps can directly pulling any existing data from GraphX GraphQL. 
+
+For these not existing new type data, for exampale, Polygon full node data (including NFTs & Tokens), Lens protocol social graph and lastest version of ENS, dapp developers can submit their data request through a EIP-style data integration mechanism, so called DCP (Data Collaboration Proposal) to KNN3 Network team, they can help you handle all the sophisticated data customization work right away (as long as the data type is on-chain or verifiable existed). 
+
+For more details please go to: https://github.com/Web3-Data-Collaboration-Proposals/DCPs
+
+In this Hackathon project, KNN3 Network help us handled
+
+Polygon NFTs & Tokens: https://github.com/Web3-Data-Collaboration-Proposals/DCPs/blob/published/DCPs/DCP-8.md
+
+Lens Protocol social graph (ProfileNFT & FollowingNFT): 
+
+Latest ENS integration: 
+
+It actually helps our dev experience much simpler!
+
+
 ## Install dependencies
 
 `pnpm i`
