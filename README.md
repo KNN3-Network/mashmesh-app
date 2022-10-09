@@ -25,7 +25,7 @@ https://docs.google.com/presentation/d/1eu_Ge8gx7RUiBMih-Rcnhx8vjBVVye2d2aoVSfdL
 
 Lens on MashMesh Demo
 
-https://drive.google.com/file/d/1ZgmWqtbqwxLb61ja_1uHhtY24HrTdjBV/view?usp=sharing
+https://drive.google.com/file/d/1neI1NgbhLpaektNmthfdXr8-GY6DWHC9/view?usp=sharing
 
 ## How to handle new data type (DCP, data collaborate mechanism backed by KNN3 Network)
 
