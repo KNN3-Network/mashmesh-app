@@ -26,7 +26,7 @@ const filterOptions = [
   {
     title: "Domain",
     value: "domain",
-    tooltip: "Include ENS and .bit",
+    tooltip: "Include ENS",
   },
   {
     title: "Lens",

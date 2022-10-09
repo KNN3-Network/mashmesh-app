@@ -25,6 +25,7 @@ const getLens = async (val) => {
         profileId,
         imageURI,
         value,
+        to,
         creator,
         followModule,
       }

@@ -191,63 +191,25 @@ export default function Lens() {
         </div>
       )}
 
-      {profileInfo.ownedBy && (
+      {nodeInfo.to && (
         <div className={style.lensDes}>
           Owner：
           <span>
-            {profileInfo.ownedBy.slice(0, 3)}...{profileInfo.ownedBy.slice(-3)}{" "}
+            {nodeInfo.to.slice(0, 3)}...{nodeInfo.to.slice(-3)}{" "}
           </span>
           <img
             src={IconCopy}
-            onClick={() => copyToClipboard(profileInfo.ownedBy)}
+            onClick={() => copyToClipboard(nodeInfo.to)}
             className={style.copyIcon}
           />
         </div>
       )}
-
-      {/* {nodeInfo.handle && (
-        <div className={style.lensDes}>Handle：<span>{nodeInfo.handle}</span></div>
-      )} */}
 
       {nodeInfo.value && (
         <div className={style.lensDes}>
           Pagerank：<span>{new BN(nodeInfo.value).times(10).toFixed(5)}</span>
         </div>
       )}
-
-      {/* {profileInfo.imageURI && (
-        <PropertyLine
-          icon={IconLink}
-          title="ImageURL"
-          value={profileInfo.imageURI}
-          valueType="image"
-        />
-      )}
-      {account && (
-        <>
-          {followBalance.length === 0 ? (
-            <ApproveButton
-              tokenAddress={feeInfo.currency}
-              contractAddress={config.contracts.lenshub}
-            >
-              <a onClick={doFollow}>Follow</a>
-            </ApproveButton>
-          ) : (
-            <div>
-              You are following this profile, click to{" "}
-              <a onClick={doUnfollow}>Unfollow</a>
-            </div>
-          )}
-
-          {feeInfo.amount && tokenInfo.symbol && (
-            <div>
-              Price:{" "}
-              {new BN(feeInfo.amount).shiftedBy(-tokenInfo.decimals).toString()}{" "}
-              {tokenInfo.symbol}
-            </div>
-          )}
-        </>
-      )} */}
     </div>
   );
 }

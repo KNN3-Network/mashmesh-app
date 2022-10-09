@@ -28,6 +28,7 @@ const defaultPaginationObject = {
   followerAddrs: defaultPagination,
   followLens: defaultPagination,
   lensInclude: defaultPagination,
+  creator: defaultPagination,
 };
 
 const getNode = (nodeInfo, parent = "", parentNodes = []) => {
@@ -415,13 +416,32 @@ const getLensRelations = async (
   entityConfig,
   originalGraphData
 ) => {
+console.log('Hiiiiii')
   const targetScript = getTargetScript(target, pagi);
+  console.log('Hi22222', targetScript)
 
   const triggerNode = originalGraphData.nodes.filter(
     (item) => item.id === id
   )[0];
 
-  const query = gql`
+
+  let res = [];
+
+  const { originalItem } = triggerNode;
+
+  if (target === "creator") {
+    console.log('Trigg')
+    // manu
+    res = {
+      handle: originalItem.handle,
+      creator: [
+        {
+          address: originalItem.to,
+        },
+      ],
+    };
+  } else {
+    const query = gql`
     {
       lens(where: { handle: "${id}" }) {
         handle,
@@ -430,7 +450,10 @@ const getLensRelations = async (
     }
   `;
 
-  const res = (await client.request(query)).lens[0];
+    res = (await client.request(query)).lens[0];
+  }
+  console.log('YOOOOOO', target)
+
 
   if (res) {
     const parentNodes = triggerNode.parentNodes
@@ -482,6 +505,38 @@ const getLensRelations = async (
         }
         originalGraphData.edges.push(
           getEdge(item.address, res.handle, "Follow", res.handle, parentNodes)
+        );
+      });
+    }
+
+    if (target === "creator") {
+      if (!checkResponseLength(res[target])) {
+        return;
+      }
+      res[target].forEach((item) => {
+        if (allNodesOnGraph.indexOf(item.address) === -1) {
+          originalGraphData.nodes.push({
+            ...getNode(
+              {
+                nodeId: item.address,
+                nodeType: "address",
+                nodeLabel: getNodeLabel(
+                  item,
+                  "address",
+                  entityConfig["address"].caption
+                ),
+                nodeSize: entityConfig["address"].size,
+                nodeColor: entityConfig["address"].color,
+                nodeOrigin: target,
+              },
+              res.handle,
+              parentNodes
+            ),
+            originalItem: item,
+          });
+        }
+        originalGraphData.edges.push(
+          getEdge(item.address, res.handle, "Own", res.handle, parentNodes)
         );
       });
     }

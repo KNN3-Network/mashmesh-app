@@ -36,7 +36,10 @@ export default function Graph({
         },
       ];
     } else if (nodeType === "lens") {
-      const handleChildren = [{ label: "Followers", key: "followerAddrs" }];
+      const handleChildren = [
+        { label: "Followers", key: "followerAddrs" },
+        { label: "Creator", key: "creator" },
+      ];
       nodeMenuItems = [
         {
           label: "Expand",

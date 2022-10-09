@@ -30,7 +30,7 @@ export default function GraphArea({ category, value }) {
         onExpand(_nodeInfo, "holdNfts", true);
         break;
       case "lens":
-        onExpand(_nodeInfo, "followerAddrs", true);
+        onExpand(_nodeInfo, "creator", true);
         break;
     }
   };
