@@ -12,6 +12,17 @@ You can view detailed codes of
 3. the intergration of the Follow feature in `/src/contract/useLenshubContract.js`
 and use the social discovery search engine in https://social.mashmesh.knn3.xyz/
 
+
+## Introductory deck
+Lens on MashMesh - Presentation slides (PDF version)
+
+https://drive.google.com/file/d/19pCTFc0bXawAtDp_IO5-Qr-vuUe1qTaH/view?usp=sharing
+
+Lens on MashMesh - Presentation slides (Google version)
+
+https://docs.google.com/presentation/d/1eu_Ge8gx7RUiBMih-Rcnhx8vjBVVye2d2aoVSfdLLf0/edit?usp=sharing
+
+
 ## Install dependencies
 
 `pnpm i`
