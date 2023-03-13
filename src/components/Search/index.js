@@ -117,7 +117,7 @@ export default function Search({ isHeader, isTrans }) {
               >
                 <div>{item.handle}</div>
                 {item.value && (
-                  <div>Pagerank: {new BN(item.value).times(10).toFixed(5)}</div>
+                  <div>Score: {new BN(item.value).times(10).toFixed(5)}</div>
                 )}
               </a>
             ))}

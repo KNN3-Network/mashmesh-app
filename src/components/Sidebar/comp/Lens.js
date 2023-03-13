@@ -207,7 +207,7 @@ export default function Lens() {
 
       {nodeInfo.value && (
         <div className={style.lensDes}>
-          Pagerank：<span>{new BN(nodeInfo.value).times(10).toFixed(5)}</span>
+          Score：<span>{new BN(nodeInfo.value).times(10).toFixed(5)}</span>
         </div>
       )}
     </div>
